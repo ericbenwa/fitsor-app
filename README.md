@@ -1,7 +1,7 @@
 Fitness-Quantified
 ==================
 
-Passively track exercises using sensors attached to fitness equipment.
+Passively track exercise using sensors attached to fitness equipment.
 
 
 
