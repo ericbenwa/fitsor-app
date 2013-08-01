@@ -20,6 +20,7 @@ Proposed Devices
 Task List
 -------------
 [ ] Sketch Web App
+[ ] Which device tied to the data (pull up? where (home/gym)?)
 
 
 
