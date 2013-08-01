@@ -28,10 +28,10 @@ Task List
 
 Profile
 -------------
-Email/Username
-Password
-Name
-Height
+Email/Username<br />
+Password<br />
+Name<br />
+Height<br />
 Weight
 
 
