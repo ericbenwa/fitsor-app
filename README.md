@@ -16,14 +16,21 @@ Proposed Devices
 6. Laziness (sitting, tv)
 
 
-Contact
+
+Task List
 -------------
+[ ] Sketch Web App
+
+
+
+### Contact
 <a href="https://github.com/ericbenwa">Eric Benoit</a><br />
 <a href="https://twitter.com/ebenoit">@ebenoit</a>
 
 
-Credits
--------------
-
+### Credits
 <a href="https://github.com/dk4invo">Dhaval Karwa</a><br />
 <a href="https://github.com/bsalinas">Ben Salinas</a>
+
+### License
+[ ]
