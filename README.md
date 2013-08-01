@@ -16,6 +16,11 @@ Proposed Devices
 6. Laziness (sitting, tv)
 
 
+Contact
+-------------
+<a href="https://github.com/ericbenwa">Eric Benoit</a>
+<a href="https://twitter.com/ebenoit">@ebenoit</a>
+
 
 Credits
 -------------
