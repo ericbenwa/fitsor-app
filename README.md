@@ -20,7 +20,7 @@ Proposed Devices
 Task List
 -------------
 [ ] Sketch Web App<br />
-[ ] Which device tied to the data (pull up? where (home/gym)?)<br /?
+[ ] Which device tied to the data (pull up? where (home/gym)?)<br />
 [ ] Base Station to communicate to devices and automagically connect to the internet<br />
 [ ] User Accounts
 
