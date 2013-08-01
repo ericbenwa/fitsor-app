@@ -18,7 +18,7 @@ Proposed Devices
 
 Contact
 -------------
-<a href="https://github.com/ericbenwa">Eric Benoit</a>
+<a href="https://github.com/ericbenwa">Eric Benoit</a><br />
 <a href="https://twitter.com/ebenoit">@ebenoit</a>
 
 
