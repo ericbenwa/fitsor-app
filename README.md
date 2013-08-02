@@ -56,7 +56,3 @@ Koko Fitclub
 ### Credits
 <a href="https://github.com/dk4invo">Dhaval Karwa</a><br />
 <a href="https://github.com/bsalinas">Ben Salinas</a>
-
-
-### License
-...
