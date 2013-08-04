@@ -30,16 +30,6 @@ Task List
 
 
 
-Profile
--------------
-Email/Username<br />
-Password<br />
-Name<br />
-Height<br />
-Weight
-
-
-
 Integrations
 -------------
 Withings, Fitbit (weight)<br />
