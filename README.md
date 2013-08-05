@@ -30,14 +30,6 @@ Task List
 
 
 
-Integrations
--------------
-Withings, Fitbit (weight)<br />
-P90x<br />
-Koko Fitclub
-
-
-
 ### Contact
 <a href="https://github.com/ericbenwa">Eric Benoit</a><br />
 <a href="https://twitter.com/ebenoit">@ebenoit</a>
