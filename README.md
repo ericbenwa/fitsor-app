@@ -5,7 +5,7 @@ Passively track exercise using sensors attached to fitness equipment.
 
 
 
-Proposed Devices
+Devices
 -------------
 
 1. Pull Ups (built into equipment or attachment)
@@ -14,19 +14,6 @@ Proposed Devices
 4. Push Ups
 5. Jump Rope
 6. Laziness (sitting, tv)
-
-
-
-Task List
--------------
-[ ] Sketch Web App<br />
-[ ] Architect Touchpoints, DB<br />
-[ ] Which device tied to the data (pull up? where (home/gym)?)<br />
-[ ] Base Station to communicate to devices and automagically connect to the internet<br />
-[ ] User Accounts<br />
-[ ] Battery Light Status<br />
-[ ] Define behavior change (sms, alert you + proxy)
-[ ] Figure out "sets", "grips", precision
 
 
 
