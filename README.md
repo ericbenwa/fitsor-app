@@ -23,6 +23,10 @@ Devices
 * 'web_app' contains the application for the browser
 
 
+### More Information
+Check out the [wiki](https://github.com/ericbenwa/Fitness-Quantified/wiki)
+
+
 ### Contact
 <a href="https://github.com/ericbenwa">Eric Benoit</a><br />
 <a href="https://twitter.com/ebenoit">@ebenoit</a>
