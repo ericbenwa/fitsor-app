@@ -16,6 +16,21 @@ Devices
 6. Laziness (sitting, tv)
 
 
+### Schedule
+Sprint 1, 2w
+* Architect API + Database & Validate
+* Select technologies
+
+Sprint 2, 2w
+* Setup Database + API
+
+Sprint 3, 2w
+* Setup user accounts
+* Display exercise in web app 
+
+Sprint 4, 2w
+* Web App Design v01
+
 
 ### Directories
 * Each exercise device will have its own folder, ex. 'PullUp_Device'.
