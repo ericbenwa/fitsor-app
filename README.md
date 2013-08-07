@@ -17,6 +17,12 @@ Devices
 
 
 
+### Directories
+* Each exercise device will have its own folder, ex. 'PullUp_Device'.
+* 'sketches' is what is
+* 'web_app' contains the application for the browser
+
+
 ### Contact
 <a href="https://github.com/ericbenwa">Eric Benoit</a><br />
 <a href="https://twitter.com/ebenoit">@ebenoit</a>
