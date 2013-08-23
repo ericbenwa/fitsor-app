@@ -11,8 +11,8 @@ Devices
 1. Pull Ups (built into equipment or attachment)
 2. Dumbbells (built into equipment or attachment)
 3. Sit Ups (built into yoga mat)
-4. Push Ups
-5. Jump Rope
+4. Push Ups (built into equipment)
+5. Jump Rope (built into handles + rope)
 6. Laziness (sitting, tv)
 
 
