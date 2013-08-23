@@ -34,7 +34,7 @@ Sprint 4, 2w
 
 ### Directories
 * Each exercise device will have its own folder, ex. 'PullUp_Device'.
-* 'sketches' is what is
+* 'sketches' is what it is
 * 'web_app' contains the application for the browser
 
 
