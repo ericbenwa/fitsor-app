@@ -18,7 +18,7 @@ Devices
 
 ### Schedule
 Sprint 1, 2w
-* Architect API + Database & Validate
+* Architect API + ~~Database & Validate~~
 * Select technologies
 
 Sprint 2, 2w
