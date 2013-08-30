@@ -17,18 +17,18 @@ Devices
 
 
 ### Schedule
-Sprint 1, 2w
-* Architect API + ~~Database & Validate~~
+Sprint 1, 2w (Ends 30.Aug)
+* ~~Architect API + Database & Validate~~
 * ~~Select technologies~~
 
-Sprint 2, 2w
-* Setup Database + API
+Sprint 2, 2w (Ends 13.Sep)
+* Setup Database + API (In Progress)
 
-Sprint 3, 2w
+Sprint 3, 2w (Ends 27.Sep)
 * Setup user accounts
 * Display exercise in web app 
 
-Sprint 4, 2w
+Sprint 4, 2w (Ends 11.Oct)
 * Web App Design v01
 
 
