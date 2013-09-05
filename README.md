@@ -22,14 +22,18 @@ Sprint 1, 2w (Ends 30.Aug)
 * ~~Select technologies~~
 
 Sprint 2, 2w (Ends 13.Sep)
-* Setup Database + API (In Progress)
+* Setup Database (In Progress)
+* GET API
 
 Sprint 3, 2w (Ends 27.Sep)
+* Display exercise in web app
 * Setup user accounts
-* Display exercise in web app 
 
 Sprint 4, 2w (Ends 11.Oct)
 * Web App Design v01
+
+Sprint 5, 2w (TBD)
+* POST API
 
 
 ### Directories
