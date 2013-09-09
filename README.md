@@ -22,7 +22,7 @@ Sprint 1, 2w (Ends 30.Aug)
 * ~~Select technologies~~
 
 Sprint 2, 2w (Ends 13.Sep)
-* Setup Database (In Progress)
+* ~~Setup Database~~
 * GET API
 
 Sprint 3, 2w (Ends 27.Sep)
