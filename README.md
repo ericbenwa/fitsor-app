@@ -38,8 +38,8 @@ Sprint 5, 2w (TBD)
 
 ### Directories
 * Each exercise device will have its own folder, ex. 'PullUp_Device'.
-* 'sketches' is what it is
-* 'web_app' contains the application for the browser
+* 'design' contains comps for the application
+* 'app' contains the application for the browser
 
 
 ### More Information
