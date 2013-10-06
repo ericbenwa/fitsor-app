@@ -1,4 +1,4 @@
-Fitness-Quantified
+Fitsor
 ==================
 
 Passively track exercise using sensors attached to fitness equipment.
@@ -43,7 +43,7 @@ Sprint 5, 2w (TBD)
 
 
 ### More Information
-Check out the [wiki](https://github.com/ericbenwa/Fitness-Quantified/wiki)
+Check out the [wiki](https://github.com/ericbenwa/fitsor/wiki)
 
 
 ### Contact
