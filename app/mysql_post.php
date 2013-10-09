@@ -23,7 +23,9 @@ if (mysql_connect($localhost, $username, $password))
   {
   	@mysql_select_db($database) or die( "Unable to select database");
 
-  	$query = "INSERT INTO pullups_table VALUES ($pullups_total,'10',now())";
+  	$query = "
+    INSERT INTO pullups_table VALUES ($pullups_total,'10',now())
+    ";
   	$result = mysql_query($query);
   } else {
   	echo('not working');
