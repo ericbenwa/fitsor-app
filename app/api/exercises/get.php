@@ -5,14 +5,17 @@
     $host = "localhost";
     $database ="ebenoitc_fitsor";
 
+    // URL parameters to interact with database
     $user_id = $_GET['user_id'];
     $device_udid = $_GET['device_udid'];
+    $exercise_type_id = $_GET['exercise_type_id'];
+    $repetitions = $_GET['repetitions'];
     
     $server = mysql_connect($host, $username, $password);
     $connection = mysql_select_db($database, $server);
 
     $myquery = "
-    SELECT * FROM `exercises` WHERE user_id=$user_id AND device_udid=$device_udid ORDER BY created_at DESC 
+    SELECT * FROM `exercises` WHERE user_id=$user_id ORDER BY created_at DESC 
     ";
     $query = mysql_query($myquery);
     
