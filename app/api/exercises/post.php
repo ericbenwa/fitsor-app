@@ -1,5 +1,5 @@
 <?php
-mysql_query("SET time_zone = 'US/New_York'");
+// mysql_query("SET time_zone = 'US/New_York'");
 
 /*
 foreach ($_REQUEST as $key => $value)
@@ -19,7 +19,7 @@ $localhost = "localhost";
 
 // URL parameters to interact with database
 $user_id = $_GET['user_id'];
-$device_udid = $_GET['device_udidd'];
+$device_udid = $_GET['device_udid'];
 $exercise_type_id = $_GET['exercise_type_id'];
 $repetitions = $_GET['repetitions'];
 
