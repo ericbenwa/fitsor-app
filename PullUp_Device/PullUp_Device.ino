@@ -11,6 +11,10 @@ int active = 0;
 int configPin = 2;                // choose the pin for the LED
 int val = 0;                    // variable for reading the pin status
 
+String postURLstart = "GET /api/exercises/post.php?user_id=1&device_udid=1&exercise_type_id=1&repetitions=";
+String postURLend = " HTTP/1.1";
+String postURL;
+
 int pullups_total_arduino;      // total number of pull ups for the day
 String pullup_string = "pullups_total=";
 String pullups_total;
@@ -30,7 +34,7 @@ int melody[] = { NOTE_A3 };
 int noteDurations[] = { 4 };
 
 // Server address
-char server[] = "www.ebenoit.com";
+char server[] = "www.fitsor.com";
 
 
 void setup() {
@@ -47,7 +51,7 @@ float inchvalue = (254.0/1024.0) *2.0* sensorvalue; //convert to inches
 //Serial.print("Sensed a-d value:"); //print a-d text
 //Serial.println(sensorvalue);       //print a-d value
 ///Serial.print("Inch value=");      //print inch text
-Serial.println(inchvalue);        //print inch value
+//Serial.println(inchvalue);        //print inch value
 delay(50);                      //optional delay 1 second
 digitalWrite(configPin,LOW);      //turn off Calibration ring and sensor
 delay(50);                     //delay 1 second
@@ -61,8 +65,8 @@ delay(50);                     //delay 1 second
     //Serial.println(cm);
   } else if (inchvalue > 20 || inchvalue == 0) {
     active = 0;
-    Serial.print("nothing in front: Active = ");
-    Serial.println(activePerson);
+//    Serial.print("nothing in front: Active = ");
+//    Serial.println(activePerson);
   }
   
   sendData();
@@ -111,19 +115,21 @@ void sendData(){                          // actions performed when we want to u
 
 
 void postData() {
-  pullups_total = pullup_string + pullups_total_arduino;
+//  pullups_total = pullup_string + pullups_total_arduino;
+  postURL = postURLstart + pullups_total_arduino + postURLend;
+  Serial.println(postURL);
 
   if (client.connect(server, 80)) {
     Serial.println("connecting...");
-    client.println("POST /client/EJB/pullups/insert_mysql.php HTTP/1.1");
-    client.println("Host: www.ebenoit.com");
-    client.println("User-Agent: Arduino/1.0");
+    client.println(postURL);
+    client.println("Host: www.fitsor.com");
+//    client.println("User-Agent: Arduino/1.0");
     client.println("Connection: close");
-    client.println("Content-Type: application/x-www-form-urlencoded;");
-    client.print("Content-Length: ");
-    client.println(pullups_total.length());
-    client.println();
-    client.println(pullups_total);
+//    client.println("Content-Type: text/html;");
+//    client.print("Content-Length: ");
+//    client.println(pullups_total.length());
+//    client.println();
+//    client.println(pullups_total);
   } 
   else {
     Serial.println("Connection failed");
