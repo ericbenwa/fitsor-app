@@ -11,9 +11,14 @@ int active = 0;
 int configPin = 2;                // choose the pin for the LED
 int val = 0;                    // variable for reading the pin status
 
-String postURLstart = "GET /api/exercises/post.php?user_id=1&device_udid=1&exercise_type_id=1&repetitions=";
+String postURLstart = "GET /api/exercises/test.php?";
+String user_id = "user_id=1&";
+String device_udid = "device_udid=1&";
+String exercise_type_id = "exercise_type_id=1&";
+String repetitions = "repetitions=";
 String postURLend = " HTTP/1.1";
 String postURL;
+
 
 int pullups_total_arduino;      // total number of pull ups for the day
 String pullup_string = "pullups_total=";
@@ -116,19 +121,41 @@ void sendData(){                          // actions performed when we want to u
 
 void postData() {
 //  pullups_total = pullup_string + pullups_total_arduino;
-  postURL = postURLstart + pullups_total_arduino + postURLend;
-  Serial.println(postURL);
+
+//  postURL = postURLstart + pullups_total_arduino + postURLend;
+//  Serial.println(postURL);
 
   if (client.connect(server, 80)) {
     Serial.println("connecting...");
-    client.println(postURL);
+    client.print("GET /api/exercises/post.php?");
+    Serial.print("GET /api/exercises/post.php?");
+    
+    client.print(user_id);
+    Serial.print(user_id);
+    
+    client.print(device_udid);
+    Serial.print(device_udid);
+    
+    client.print(exercise_type_id);
+    Serial.print(exercise_type_id);
+    
+    client.print(repetitions);
+    Serial.print(repetitions);
+    
+    client.print(pullups_total_arduino);
+    Serial.print(pullups_total_arduino);
+    
+    client.println(postURLend);
+    Serial.println(postURLend);
+    
     client.println("Host: www.fitsor.com");
-//    client.println("User-Agent: Arduino/1.0");
+    client.println("User-Agent: Arduino/1.0");
+    client.println("Content-Type: text/html;");
     client.println("Connection: close");
-//    client.println("Content-Type: text/html;");
 //    client.print("Content-Length: ");
+//    client.println(postURL.length());
 //    client.println(pullups_total.length());
-//    client.println();
+    client.println();
 //    client.println(pullups_total);
   } 
   else {

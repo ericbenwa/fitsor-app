@@ -11,6 +11,12 @@ foreach ($_REQUEST as $key => $value)
 echo $pullups_total;
 */
 
+header('Content-type: text/plain');
+echo $_GET['user_id'];
+echo $_GET['device_udid'];
+echo $_GET['exercise_type_id'];
+echo $_GET['repetitions'];
+
 // Settings to connect to the database
 $username = "ebenoitc_fitsor";
 $password = "fitsor";
