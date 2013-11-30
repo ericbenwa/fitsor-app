@@ -23,17 +23,17 @@ Sprint 1, 2w (Ends 30.Aug)
 
 Sprint 2, 2w (Ends 13.Sep)
 * ~~Setup Database~~
-* POST API
+* ~~POST API~~
 
 Sprint 3, 2w (Ends 27.Sep)
-* Update Arduino POST
+* ~~Update Arduino POST~~
 * Setup user accounts
 
 Sprint 4, 2w (Ends 11.Oct)
 * Web App Design v01
 
 Sprint 5, 2w (TBD)
-* GET API
+* ~~GET API~~
 * Display exercise in web app
 
 
