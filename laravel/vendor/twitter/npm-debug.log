@@ -1,0 +1,23 @@
+info it worked if it ends with ok
+verbose cli [ 'node', '/Users/ericbenoit/.nvm/v0.6.6/bin/npm', 'install' ]
+info using npm@1.1.0-beta-4
+info using node@v0.6.6
+verbose config file /Users/ericbenoit/.npmrc
+verbose config file /Users/ericbenoit/.nvm/v0.6.6/etc/npmrc
+verbose config file /Users/ericbenoit/.nvm/v0.6.6/lib/node_modules/npm/npmrc
+ERR! Couldn't read dependencies.
+ERR! Error: ENOENT, no such file or directory '/Users/ericbenoit/Sites/fitsor/laravel/vendor/twitter/package.json'
+ERR! Report this *entire* log at:
+ERR!     <http://github.com/isaacs/npm/issues>
+ERR! or email it to:
+ERR!     <npm-@googlegroups.com>
+ERR! 
+ERR! System Darwin 13.0.0
+ERR! command "node" "/Users/ericbenoit/.nvm/v0.6.6/bin/npm" "install"
+ERR! cwd /Users/ericbenoit/Sites/fitsor/laravel/vendor/twitter
+ERR! node -v v0.6.6
+ERR! npm -v 1.1.0-beta-4
+ERR! path /Users/ericbenoit/Sites/fitsor/laravel/vendor/twitter/package.json
+ERR! code ENOENT
+ERR! message ENOENT, no such file or directory '/Users/ericbenoit/Sites/fitsor/laravel/vendor/twitter/package.json'
+verbose exit [ 1, true ]

@@ -1,0 +1,13 @@
+body {
+	background: #73c2c5;
+	padding-top: 40px;
+}
+ 
+.form-signup, .form-signin {
+	width: 400px;
+	margin: 0 auto;
+}
+
+.btn-primary {
+	background: #4718be;
+}
