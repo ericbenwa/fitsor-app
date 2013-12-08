@@ -98,7 +98,7 @@ void sendData(){                          // actions performed when we want to u
     long currentTime = millis();
     elapsedTimeSinceLastPullUp = currentTime - timestampOfLastPullUp;
  
-    if (elapsedTimeSinceLastPullUp > 5000){              // after 30 seconds from last pull up lets upload the data
+    if (elapsedTimeSinceLastPullUp > 5000){              // after 5 seconds from last pull up lets upload the data
       connectWifi();
       Serial.println("Attempting to send data");
       postData();
