@@ -12,3 +12,8 @@
 */
 
 Route::controller('users', 'UsersController');
+
+Route::get('users/profile', function() 
+{
+	return View::make('users.profile');
+});

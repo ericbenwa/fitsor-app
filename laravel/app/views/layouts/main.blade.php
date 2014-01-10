@@ -20,8 +20,8 @@
 					<li>{{ HTML::link('users/register', 'Get Started') }}</li>   
 					<li>{{ HTML::link('users/login', 'Sign In') }}</li>
 					@else
-					<li>{{ HTML::link('dashboard', 'Dashboard') }}</li>
-					<li>{{ HTML::link('profile', 'My Profile') }}</li>
+					<li>{{ HTML::link('users/dashboard', 'Dashboard') }}</li>
+					<li>{{ HTML::link('users/profile', 'My Profile') }}</li>
 					<li>{{ HTML::link('users/logout', 'Log Out') }}</li>
 					@endif
 					<li><a href="mailto:hello@fitsor.com?subject=Feedback">Feedback</a></li>
