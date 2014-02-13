@@ -11,9 +11,11 @@
 |
 */
 
-Route::controller('users', 'UsersController');
+// Marketing Routes
+Route::get('/', 'MarketingController@home');
 
-Route::get('users/profile', function() 
-{
-	return View::make('users.profile');
-});
+Route::get('about', 'MarketingController@about');
+
+
+// Application Routes
+Route::controller('users', 'UsersController');
