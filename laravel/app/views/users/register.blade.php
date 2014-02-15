@@ -7,8 +7,13 @@
 		@endforeach
 	</ul>
 
-	<!-- {{ Form::text('firstname', null, array('class'=>'input-block-level', 'placeholder'=>'First Name')) }} -->
-	<!-- {{ Form::text('lastname', null, array('class'=>'input-block-level', 'placeholder'=>'Last Name')) }} -->
+	<div class="form-group">
+		{{ Form::text('firstname', null, array('class'=>'input-block-level', 'placeholder'=>'First Name')) }}
+	</div>
+	<div class="form-group">
+		{{ Form::text('lastname', null, array('class'=>'input-block-level', 'placeholder'=>'Last Name')) }}
+	</div>
+
 	<div class="form-group">
 		{{ Form::text('email', null, array('class'=>'form-control', 'placeholder'=>'Email Address')) }}
 	</div>
