@@ -15,11 +15,11 @@
 				@if(!Auth::check())
 				<li>{{ HTML::link('about', 'About') }}</li>
 				<li>{{ HTML::link('users/register', 'Get Started') }}</li>   
-				<li>{{ HTML::link('users/login', 'Sign In') }}</li>
+				<li>{{ HTML::link('users/signin', 'Sign In') }}</li>
 				@else
 				<li>{{ HTML::link('users/dashboard', 'Dashboard') }}</li>
 				<li>{{ HTML::link('users/profile', 'My Profile') }}</li>
-				<li>{{ HTML::link('users/logout', 'Log Out') }}</li>
+				<li>{{ HTML::link('users/signout', 'Sign Out') }}</li>
 				@endif
 				<li><a href="mailto:hello@fitsor.com?subject=Feedback">Feedback</a></li>
 			</ul>
