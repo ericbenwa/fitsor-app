@@ -19,3 +19,5 @@ Route::get('about', 'MarketingController@about');
 
 // Application Routes
 Route::controller('users', 'UsersController');
+
+Route::controller('exercisetypes', 'ExerciseTypesController');
