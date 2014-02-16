@@ -1,4 +1,9 @@
+@extends('layouts/global')
+
+@section('content')
 {{ Form::open(array('url'=>'users/create', 'class'=>'form-signup')) }}
+<!-- Need to udpate this form call once debug insert sql error -->
+
 	<h2>Create Account</h2>
 
 	<ul>
@@ -28,3 +33,4 @@
 
 	<input class="btn btn-large btn-primary btn-block" value="Create Account" type="submit">
 </form>
+@endsection

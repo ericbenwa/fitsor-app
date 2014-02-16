@@ -1,3 +1,6 @@
+@extends('layouts/global')
+
+@section('content')
 <form action="{{ action('UsersController@postUpdate') }}" method="POST" class="form-signup">
 	{{ Form::token() }}
 
@@ -22,3 +25,4 @@
 
 	<input class="btn btn-large btn-primary btn-block" type="submit" value="Update Profile">
 </form>
+@endsection

@@ -1,4 +1,9 @@
-{{ Form::open(array('url'=>'users/signin', 'class'=>'form-signin')) }}
+@extends('layouts/global')
+
+@section('content')
+<form action="{{ action('UsersController@postSignin') }}" method="POST" class="form-signin">
+	{{ Form::token() }}
+
 	<h2 class="form-signin-heading">Sign In</h2>
 
 	<ul>
@@ -15,5 +20,6 @@
 		{{ Form::password('password', array('class'=>'form-control', 'placeholder'=>'Password')) }}
 	</div>
 
-	{{ Form::submit('Sign In', array('class'=>'btn btn-large btn-primary btn-block'))}}
-{{ Form::close() }}
+	<input class="btn btn-large btn-primary btn-block" value="Sign In" type="submit">
+</form>
+@endsection
