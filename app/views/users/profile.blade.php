@@ -1,19 +1,7 @@
-<h1>Profile</h1>
+<form action="{{ action('UsersController@postUpdate') }}" method="POST" class="form-signup">
+	<?php echo Form::token(); ?>
 
-<p>{{ Auth::user()->firstname}} {{ Auth::user()->lastname}}</p>
-
-<p>{{ Auth::user()->email}}</p>
-
-
-<ul>
-	@foreach(ExerciseType::all() as $error)
-	<li>{{ var_dump($error) }}</li>
-	@endforeach
-</ul>
-
-
-{{ Form::open(array('action'=>'UsersController@postUpdate', 'class'=>'form-update')) }}
-	<h2 class="form-signup-heading">Create Account</h2>
+	<h1>{{ $user->firstname }} {{ $user->lastname }}'s Profile</h1>
 
 	<ul>
 		@foreach($errors->all() as $error)
@@ -22,15 +10,15 @@
 	</ul>
 
 	<div class="form-group">
-		<input class="form-control" name="firstname" value="{{ $user->firstname }}">
+		<input class="form-control" name="firstname" value="{{ $user->firstname }}" placeholder="First Name">
 	</div>
 	<div class="form-group">
-		<input class="form-control" name="lastname" value="{{ $user->lastname }}">
+		<input class="form-control" name="lastname" value="{{ $user->lastname }}" placeholder="Last Name">
 	</div>
 
 	<div class="form-group">
-		<input class="form-control" name="email" value="{{ $user->lastname }}">
+		<input class="form-control" name="email" value="{{ $user->email }}" placeholder="Email">
 	</div>
 
-	{{ Form::submit('Update Account', array('class'=>'btn btn-large btn-primary btn-block'))}}
-{{ Form::close() }}
+	<input class="btn btn-large btn-primary btn-block" type="submit" value="Update Account">
+</form>
