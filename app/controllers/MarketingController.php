@@ -7,6 +7,11 @@ class MarketingController extends BaseController {
 		return View::make('marketing/home');
 	}
 
+		public function getHome()
+	{
+		return View::make('marketing/home');
+	}
+
 	public function getAbout()
 	{
 		return View::make('marketing/about');
