@@ -9,7 +9,7 @@ class MarketingController extends BaseController {
 
 	public function getAbout()
 	{
-		return 'Viewing About for Marketing';
+		return View::make('marketing/about');
 	}
 
 }
