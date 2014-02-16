@@ -1,4 +1,4 @@
-Fitsor
+Fitsor-App
 ==================
 
 Passively track exercise using sensors attached to fitness equipment.
