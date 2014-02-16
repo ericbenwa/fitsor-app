@@ -1,7 +1,6 @@
 <?php
 
 class UsersController extends BaseController {
-	protected $layout = "layouts.main";
 
 	public function __construct() {
 		$this->beforeFilter('csrf', array('on'=>'post'));
@@ -9,7 +8,7 @@ class UsersController extends BaseController {
 	}
 
 	public function getRegister() {
-		return View::make('users.register');
+		return View::make('users/register');
 	}
 
 	public function postCreate() {
@@ -30,7 +29,7 @@ class UsersController extends BaseController {
 	}
 
 	public function getLogin() {
-		return View::make('users.login');
+		return View::make('users/login');
 	}
 
 	public function postSignin() {
@@ -44,11 +43,11 @@ class UsersController extends BaseController {
 	}
 
 	public function getDashboard() {
-		return View::make('users.dashboard')->with('user', Auth::user());
+		return View::make('users/dashboard')->with('user', Auth::user());
 	}
 
 	public function getProfile() {
-		return View::make('users.profile')->with('user', Auth::user());
+		return View::make('users/profile')->with('user', Auth::user());
 	}
 
 	public function getLogout() {
