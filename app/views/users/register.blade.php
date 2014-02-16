@@ -13,22 +13,22 @@
 	</ul>
 
 	<div class="form-group">
-		{{ Form::text('firstname', null, array('class'=>'form-control', 'placeholder'=>'First Name')) }}
+		<input class="form-control" name="firstname" placeholder="First Name">
 	</div>
 	<div class="form-group">
-		{{ Form::text('lastname', null, array('class'=>'form-control', 'placeholder'=>'Last Name')) }}
-	</div>
-
-	<div class="form-group">
-		{{ Form::text('email', null, array('class'=>'form-control', 'placeholder'=>'Email')) }}
+		<input class="form-control" name="lastname" placeholder="Last Name">
 	</div>
 
 	<div class="form-group">
-		{{ Form::password('password', array('class'=>'form-control', 'placeholder'=>'Password')) }}
+		<input class="form-control" name="email" placeholder="Email">
 	</div>
 
 	<div class="form-group">
-		{{ Form::password('password_confirmation', array('class'=>'form-control', 'placeholder'=>'Confirm Password')) }}
+		<input class="form-control" name="password" placeholder="Password">
+	</div>
+
+	<div class="form-group">
+		<input class="form-control" name="password_confirmation" placeholder="Confirm Password">
 	</div>
 
 	<input class="btn btn-large btn-primary btn-block" value="Create Account" type="submit">
