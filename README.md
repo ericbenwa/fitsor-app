@@ -54,4 +54,5 @@ Check out the [wiki](https://github.com/ericbenwa/fitsor/wiki)
 
 ### Credits
 <a href="https://github.com/dk4invo">Dhaval Karwa</a><br />
-<a href="https://github.com/bsalinas">Ben Salinas</a>
+<a href="https://github.com/bsalinas">Ben Salinas</a><br />
+<a href="https://github.com/dadleyy">Danny Hadley</a>
