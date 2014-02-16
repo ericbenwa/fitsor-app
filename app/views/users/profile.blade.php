@@ -1,5 +1,5 @@
 <form action="{{ action('UsersController@postUpdate') }}" method="POST" class="form-signup">
-	<?php echo Form::token(); ?>
+	{{ Form::token() }}
 
 	<h1>{{ $user->firstname }} {{ $user->lastname }}'s Profile</h1>
 
