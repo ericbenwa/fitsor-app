@@ -1,16 +1,16 @@
 <?php
 
 class MarketingController extends BaseController {
-	public $layout = "layouts.main";
 
-	public function home()
+	public function getIndex()
 	{
-		$this->layout->content = View::make('marketing.home');
+		return View::make('marketing/home');
 	}
 
-	public function about()
+	public function getAbout()
 	{
-		return 'viewing about';
+		return 'Viewing About for Marketing';
 	}
 
 }
+?>
