@@ -44,16 +44,27 @@ class UsersController extends BaseController {
 	}
 
 	public function getDashboard() {
-		$this->layout->content = View::make('users.dashboard');
+		$this->layout->content = View::make('users.dashboard')->with('user', Auth::user());
 	}
 
 	public function getProfile() {
-		$this->layout->content = View::make('users.profile');
+		$this->layout->content = View::make('users.profile')->with('user', Auth::user());
 	}
 
 	public function getLogout() {
 		Auth::logout();
 		return Redirect::to('users/login')->with('message', 'Your are now logged out!');
+	}
+
+	public function postUpdate() {
+		// TBD - add form validation here
+		$user = Auth::user();
+		$user->firstname = Input::get('firstname');
+		$user->lastname = Input::get('lastname');
+		$user->email = Input::get('email');
+		$user->save();
+
+		return Redirect::action('UsersController@getProfile');
 	}
 }
 ?>
