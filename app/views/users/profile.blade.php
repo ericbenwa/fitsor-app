@@ -20,5 +20,5 @@
 		<input class="form-control" name="email" value="{{ $user->email }}" placeholder="Email">
 	</div>
 
-	<input class="btn btn-large btn-primary btn-block" type="submit" value="Update Account">
+	<input class="btn btn-large btn-primary btn-block" type="submit" value="Update Profile">
 </form>
