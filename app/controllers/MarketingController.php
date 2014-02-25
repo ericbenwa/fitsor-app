@@ -2,18 +2,15 @@
 
 class MarketingController extends BaseController {
 
-	public function getIndex()
-	{
+	public function getIndex() {
 		return View::make('marketing/home')->with('user', Auth::user());
 	}
 
-		public function getHome()
-	{
+	public function getHome() {
 		return View::make('marketing/home')->with('user', Auth::user());
 	}
 
-	public function getAbout()
-	{
+	public function getAbout() {
 		return View::make('marketing/about');
 	}
 
