@@ -8,7 +8,7 @@ class UsersController extends BaseController {
 	}
 
 	public function getRegister() {
-		return View::make('users/register');
+		return View::make('user/register');
 	}
 
 	public function postCreate() {
@@ -22,34 +22,34 @@ class UsersController extends BaseController {
 			$user->password = Hash::make(Input::get('password'));
 			$user->save();
 
-			return Redirect::to('users/signin')->with('message', 'Thanks for registering!');
+			return Redirect::to('user/signin')->with('message', 'Thanks for registering!');
 		} else {
-			return Redirect::to('users/register')->withErrors($validator)->withInput();
+			return Redirect::to('user/register')->withErrors($validator)->withInput();
 		}
 	}
 
 	public function getSignin() {
-		return View::make('users/signin');
+		return View::make('user/signin');
 	}
 
 	public function postSignin() {
 		if (Auth::attempt(array('email'=>Input::get('email'), 'password'=>Input::get('password')))) {
-		return Redirect::to('users/dashboard');
+		return Redirect::to('dashboard');
 		} else {
-		return Redirect::to('users/signin')
+		return Redirect::to('user/signin')
 		->with('message', 'Your username/password combination was incorrect')
 		->withInput();
 		}
 	}
 
-	public function getDashboard() {
-		return View::make('users/dashboard')->with('user', Auth::user());
-	}
+	// public function getDashboard() {
+	// 	return View::make('user/dashboard')->with('user', Auth::user());
+	// }
 
 	public function getExercise() {
 		$user_id = Auth::user()->id;
 		$new_exercises = Exercise::where('user_id', '=', (string)$user_id)->get(); // this should live in a Model
-		return View::make('users/exercise')->with('new_exercises', $new_exercises)
+		return View::make('user/exercise')->with('new_exercises', $new_exercises)
 		->with('user', Auth::user());
 		 // $user_exercises = Auth::User()->exercises(); // danny's help
 		// return View::make('users/exercise')
@@ -59,12 +59,12 @@ class UsersController extends BaseController {
 	}
 
 	public function getProfile() {
-		return View::make('users/profile')->with('user', Auth::user());
+		return View::make('user/profile')->with('user', Auth::user());
 	}
 
 	public function getSignout() {
 		Auth::logout();
-		return Redirect::to('users/signin')->with('message', 'Your are now signed out!');
+		return Redirect::to('user/signin')->with('message', 'Your are now signed out!');
 	}
 
 	public function postUpdate() {
