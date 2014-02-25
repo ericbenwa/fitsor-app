@@ -13,13 +13,13 @@
 		<div class="collapse navbar-collapse">
 			<ul class="nav navbar-nav">
 				@if(!Auth::check())
-				<li>{{ HTML::link('about', 'About') }}</li>
-				<li>{{ HTML::link('users/register', 'Get Started') }}</li>   
-				<li>{{ HTML::link('users/signin', 'Sign In') }}</li>
+				<li>{{ HTML::linkAction('MarketingController@getAbout', 'About') }}</li>
+				<li>{{ HTML::linkAction('UsersController@postCreate', 'Get Started') }}</li>  
+				<li>{{ HTML::linkAction('UsersController@getSignin', 'Sign In') }}</li>
 				@else
-				<li>{{ HTML::link('users/dashboard', 'Dashboard') }}</li>
-				<li>{{ HTML::link('users/profile', 'My Profile') }}</li>
-				<li>{{ HTML::link('users/signout', 'Sign Out') }}</li>
+				<li>{{ HTML::linkRoute('dashboard', 'Dashboard') }}</li>
+				<li>{{ HTML::linkAction('UsersController@getProfile', 'Profile') }}</li>
+				<li>{{ HTML::linkAction('UsersController@getSignout', 'Sign Out') }}</li>
 				@endif
 				<li><a href="mailto:hello@fitsor.com?subject=Feedback">Feedback</a></li>
 			</ul>
