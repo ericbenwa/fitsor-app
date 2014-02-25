@@ -37,6 +37,10 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		return $this->getKey();
 	}
 
+	public function exercises() {
+		return Exercise::where("user_id", "=" , $this->id); // danny's help
+	}
+
 	/**
 	 * Get the password for the user.
 	 *

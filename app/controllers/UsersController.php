@@ -34,7 +34,7 @@ class UsersController extends BaseController {
 
 	public function postSignin() {
 		if (Auth::attempt(array('email'=>Input::get('email'), 'password'=>Input::get('password')))) {
-		return Redirect::to('users/dashboard')->with('message', 'You are now logged in!');
+		return Redirect::to('users/dashboard');
 		} else {
 		return Redirect::to('users/signin')
 		->with('message', 'Your username/password combination was incorrect')
@@ -44,6 +44,18 @@ class UsersController extends BaseController {
 
 	public function getDashboard() {
 		return View::make('users/dashboard')->with('user', Auth::user());
+	}
+
+	public function getExercise() {
+		$user_id = Auth::user()->id;
+		$new_exercises = Exercise::where('user_id', '=', (string)$user_id)->get(); // this should live in a Model
+		return View::make('users/exercise')->with('new_exercises', $new_exercises)
+		->with('user', Auth::user());
+		 // $user_exercises = Auth::User()->exercises(); // danny's help
+		// return View::make('users/exercise')
+		// 	->with('exercise', 'Recorded Exercises')
+		// 	->with('exercises', Exercise::all());
+		// ->with('user_exercises', '');
 	}
 
 	public function getProfile() {
@@ -65,5 +77,6 @@ class UsersController extends BaseController {
 
 		return Redirect::action('UsersController@getProfile');
 	}
+
 }
 ?>
