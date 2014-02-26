@@ -7,7 +7,7 @@ class UsersController extends BaseController {
 		$this->beforeFilter('auth', array('only'=>array('getDashboard')));
 	}
 
-	public function getRegister() {
+	public function getCreate() {
 		return View::make('user/register');
 	}
 
@@ -34,37 +34,25 @@ class UsersController extends BaseController {
 
 	public function postSignin() {
 		if (Auth::attempt(array('email'=>Input::get('email'), 'password'=>Input::get('password')))) {
-		return Redirect::to('dashboard');
+			return Redirect::to('dashboard');
 		} else {
 		return Redirect::to('user/signin')
-		->with('message', 'Your username/password combination was incorrect')
-		->withInput();
+			->with('message', 'Your username/password combination was incorrect')
+			->withInput();
 		}
+	}
+
+	public function getSignout() {
+		Auth::logout();
+		return Redirect::to('user/signin')->with('message', 'Your are now signed out!');
 	}
 
 	// public function getDashboard() {
 	// 	return View::make('user/dashboard')->with('user', Auth::user());
 	// }
 
-	public function getExercise() {
-		$user_id = Auth::user()->id;
-		$new_exercises = Exercise::where('user_id', '=', (string)$user_id)->get(); // this should live in a Model
-		return View::make('user/exercise')->with('new_exercises', $new_exercises)
-		->with('user', Auth::user());
-		 // $user_exercises = Auth::User()->exercises(); // danny's help
-		// return View::make('users/exercise')
-		// 	->with('exercise', 'Recorded Exercises')
-		// 	->with('exercises', Exercise::all());
-		// ->with('user_exercises', '');
-	}
-
 	public function getProfile() {
 		return View::make('user/profile')->with('user', Auth::user());
-	}
-
-	public function getSignout() {
-		Auth::logout();
-		return Redirect::to('user/signin')->with('message', 'Your are now signed out!');
 	}
 
 	public function postUpdate() {
@@ -76,6 +64,18 @@ class UsersController extends BaseController {
 		$user->save();
 
 		return Redirect::action('UsersController@getProfile');
+	}
+
+	public function getExercise() {
+		$user_id = Auth::user()->id;
+		$new_exercises = Exercise::where('user_id', '=', (string)$user_id)->get(); // this should live in a Model
+		return View::make('user/exercise')->with('new_exercises', $new_exercises)
+		->with('user', Auth::user());
+		// $user_exercises = Auth::User()->exercises(); // danny's help
+		// return View::make('users/exercise')
+		// ->with('exercise', 'Recorded Exercises')
+		// ->with('exercises', Exercise::all());
+		// ->with('user_exercises', '');
 	}
 
 }
