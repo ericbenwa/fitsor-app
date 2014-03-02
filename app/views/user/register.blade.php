@@ -1,8 +1,8 @@
 @extends('layouts/global')
 
 @section('content')
-{{ Form::open(array('url'=>'users/create', 'class'=>'form-signup')) }}
-<!-- Need to udpate this form call once debug insert sql error -->
+<form action="{{ action('UsersController@postCreate') }}" method="POST" class="form-signup">
+	{{ Form::token() }}
 
 	<h2>Create Account</h2>
 
