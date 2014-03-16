@@ -17,7 +17,7 @@
 				<li>{{ HTML::linkAction('UsersController@postCreate', 'Get Started') }}</li>  
 				<li>{{ HTML::linkAction('UsersController@getSignin', 'Sign In') }}</li>
 				@else
-				<li>{{ HTML::linkRoute('dashboard', 'Dashboard') }}</li>
+				<li>{{ HTML::linkAction('DashboardController@getIndex', 'Dashboard') }}</li>
 				<li>{{ HTML::linkAction('UsersController@getProfile', 'Profile') }}</li>
 				<li>{{ HTML::linkAction('UsersController@getSignout', 'Sign Out') }}</li>
 				@endif
