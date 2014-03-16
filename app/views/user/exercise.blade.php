@@ -6,9 +6,8 @@
 {{ $user->firstname }}
 
 <ul>
-@foreach($new_exercises as $exercise)
-	<li>{{ $exercise->repetitions }}</li>
+@foreach($all_exercises as $exercise)
+	<li><strong>{{ $exercise->repetitions }}</strong> , {{ $exercise->created_at }}</li>
 @endforeach
 </ul>
-
-	@endsection
+@endsection
