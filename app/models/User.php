@@ -37,7 +37,8 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		return $this->getKey();
 	}
 
-	public function exercises() {
+	public function exercises()
+	{
 		return Exercise::where("user_id", "=" , $this->id); // danny's help
 	}
 
