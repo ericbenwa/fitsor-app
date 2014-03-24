@@ -24,7 +24,7 @@ class UsersController extends BaseController {
 
 			return Redirect::to('user/signin')->with('message', 'Thanks for registering!');
 		} else {
-			return Redirect::to('user/register')->withErrors($validator)->withInput();
+			return Redirect::to('user/create')->withErrors($validator)->withInput();
 		}
 	}
 
