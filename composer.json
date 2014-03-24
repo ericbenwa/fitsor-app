@@ -8,6 +8,9 @@
 		"twitter/bootstrap": "*",
 		"way/generators": "dev-master"
 	},
+	"require-dev": {
+	    "way/generators": "2.*"
+	},
 	"autoload": {
 		"classmap": [
 			"app/commands",
